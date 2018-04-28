@@ -1,0 +1,21 @@
+<script src="i18n/angular-locale_de-de.js"></script>
+<h1>{{ heroe.nombre | uppercase}} <small>{{heroe.aparicion | date:'full':'':'de'}}</small></h1>
+<hr>
+
+<div class="row">
+  <div class="col-md-4">
+    <img [src]= "heroe.img" class="img-fluid">
+    <br>
+    <br>
+    <a [routerLink]="['/heroes']" class="btn btn-outline-danger btn-block">Regresar</a>
+  </div>
+  <div class="col-md-8">
+    <h3>{{ heroe.nombre }}</h3>
+    <hr>
+    <p>{{heroe.bio}}</p>
+    <div [ngSwitch]="heroe.casa">
+      <img *ngSwitchCase="'DC'" src="/assets/dclogo.png">
+      <img *ngSwitchCase="'Marvel'" src="/assets/marvellogo.jpg">
+    </div>
+  </div>
+</div>
