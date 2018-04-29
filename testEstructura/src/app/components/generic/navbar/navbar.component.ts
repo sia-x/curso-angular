@@ -13,6 +13,6 @@ export class NavbarComponent implements OnInit {
   }
 
   buscarHeroe(termino:string){
-    console.log(termino);
+      
   }
 }
